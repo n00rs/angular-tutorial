@@ -12,3 +12,7 @@
 .menu li :hover{
     background-color: darkslategray;
 }
+ .menu li a {
+    color: white;
+    text-decoration: none;
+ }

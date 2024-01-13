@@ -1,4 +1,9 @@
 <ul class="menu">
-<li *ngFor = "let menuName of names" (click)="menuClickHandler({menuName});">{{menuName}}</li>
+    <li *ngFor="let menuName of names">
+        <a routerLink="/{{menuName.toLowerCase()}}" routerLinkActive="active">
+            {{menuName}}
+        </a>
+
+    </li>
 </ul>
 {{content}}
