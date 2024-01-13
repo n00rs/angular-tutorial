@@ -1,2 +1,17 @@
 <app-menu></app-menu>
+
+
+<button (click)="clickHandler();">
+    {{blnDisplay ? 'OFF':'ON'}}
+</button>
+<div (click)="clickHandler();">
+
+    <img *ngIf="blnDisplay"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQHu2TSqoQx94tLwjsl2S-odpqX1H9kfCJfw&usqp=CAU" />
+    <img *ngIf="!blnDisplay"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFnYyfqj4K-Tkwtxxg7-tSIrv0tKvkdu_mJw&usqp=CAU" />
+</div>
+
+
+
 <app-footer></app-footer>

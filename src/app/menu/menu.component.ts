@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Type } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -14,7 +14,7 @@ export class MenuComponent {
   constructor() {
     this.names = ['Home', 'Gallery', 'Help', 'About', 'Contact Us', 'feedBack']
     this.content = 'This is an content to be displayed'
-    
   }
+  menuClickHandler = ({ menuName }: { menuName: string }) => alert(`Clicked On ${menuName}`)
   ngOnInit() { }
 }

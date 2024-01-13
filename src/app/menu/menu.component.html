@@ -1,4 +1,4 @@
 <ul class="menu">
-<li *ngFor = "let menuName of names">{{menuName}}</li>
+<li *ngFor = "let menuName of names" (click)="menuClickHandler({menuName});">{{menuName}}</li>
 </ul>
 {{content}}

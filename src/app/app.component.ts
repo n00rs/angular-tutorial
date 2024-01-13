@@ -14,5 +14,8 @@ import { FooterComponent } from './footer/footer.component';
 
 export class AppComponent {
 name = 'JON';age = 22; rank= 1000
-
+blnDisplay = false
+clickHandler = ()=>{
+  this.blnDisplay=!this.blnDisplay
+}
 }
