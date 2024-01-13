@@ -1,0 +1,14 @@
+.menu{
+    list-style: none;
+}
+
+.menu li {
+    float: left;
+    background-color: green;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+.menu li :hover{
+    background-color: darkslategray;
+}
