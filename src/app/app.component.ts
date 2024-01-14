@@ -10,5 +10,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'tutorial_2';
+  public title = 'TITLE 9898';
+  data = { strTech1: 'Angular', strTech2: "Node Js", strPrgrmLanguage: 'Javascript' }
+  colorFunc (){
+    return 'blue'
+  }
 }
