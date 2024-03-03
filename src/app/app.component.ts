@@ -10,25 +10,26 @@ import { FormsModule } from "@angular/forms";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  
   ngOnInit() {
     console.log('hi from ngOnInit');
+  } 
+  fruits: IoFruitObj[] = [
+    { name: 'orange', price: 100 },
+    { name: 'grape', price: 500 },
+    { name: 'anar', price: 600 },
+    { name: 'carrot', price: 700 },
+    { name: 'pappya', price: 800 },
+    { name: 'apple', price: 900 }
+  ]
 
-  }
+  trackByFn(index: number, item: IoFruitObj) {
+    console.log({ index, item });
 
-  public count = 0;
-  public strOddOrEven = "Even"
-  blnHidden = true;
-  clear() {
-    this.count = 0;
-    this.strOddOrEven = "Even"
-    this.blnHidden = true;
+    return item.name;
   }
-  doCheckOddEven(num: number) {
-    this.blnHidden = false;
-    this.strOddOrEven = num % 2 !== 0 ? "ODD" : "EVEN";
-    return num % 2 !== 0 ? "ODD" : "EVEN";
-  }
-  onChange() {
-    this.strOddOrEven = this.count % 2 !== 0 ? "ODD" : "EVEN";
-  }
+}
+interface IoFruitObj {
+  name: string
+  price: number
 }

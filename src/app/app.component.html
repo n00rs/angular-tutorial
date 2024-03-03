@@ -1,14 +1,27 @@
-<h2 style="text-align: center;">Two way Data Binding</h2>
-<div style="text-align: center;">
-  <input type="number" [(ngModel)]="count" />
+<h2 style="text-align: center;">Structural Directives</h2>
+<hr>
+<table>
+  <thead>
+    <th>
+      sl No.
+    </th>
+    <th>
+      Name
+    </th>
+    <th>
+      price
+    </th>
+  </thead>
+  <tbody *ngFor="let item of fruits; index as i; trackBy: trackByFn">
+    <tr *ngIf="item.price>300">
+      <th>{{i+1}}</th>
+      <th>
+        {{item.name}}
+      </th>
+      <th>
+        {{item.price}}
+      </th>
+    </tr>
+  </tbody>
 
-  <button (click) = "doCheckOddEven(count) ">
-    Check
-  </button>
-  <button style="text-align: center;"  (click) = "clear()">
-    clear
-  </button>
-  <h4 style="text-align: center;" [hidden]="blnHidden">
-    {{count}} -- {{strOddOrEven}}
-  </h4>
-</div>
+</table>
