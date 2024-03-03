@@ -1,5 +1,8 @@
-<p>home works!</p>
-
-<button (click)="goToContact();">
-    Go To Contact
-</button>
+<div >
+<h3>Api calling in Angular</h3>
+<ul *ngFor="let item of arrPhotos;index as i">
+<li id="index">
+    {{item?.title}}
+</li>
+</ul>
+</div>
