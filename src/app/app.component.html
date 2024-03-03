@@ -1,27 +1,24 @@
-<h2 style="text-align: center;">Structural Directives</h2>
-<hr>
-<table>
-  <thead>
-    <th>
-      sl No.
-    </th>
-    <th>
-      Name
-    </th>
-    <th>
-      price
-    </th>
-  </thead>
-  <tbody *ngFor="let item of fruits; index as i; trackBy: trackByFn">
-    <tr *ngIf="item.price>300">
-      <th>{{i+1}}</th>
-      <th>
-        {{item.name}}
-      </th>
-      <th>
-        {{item.price}}
-      </th>
-    </tr>
-  </tbody>
+<nav class="navbar bg-body-tertiary">
+  <div class="main-div">
 
-</table>
+    <div class="container-fluid">
+      Angular Routing
+    </div>
+    <div>
+      <ul class="ul-div">
+        <li [routerLink]="['/home']" style="cursor: pointer;">
+          Home
+        </li>
+        <li [routerLink]="['/contact-us']" style="cursor: pointer;">
+          Contact Us
+        </li>
+        <li [routerLink]="['/about-us']" style="cursor: pointer;">
+          About Us
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet>
+
+</router-outlet>
