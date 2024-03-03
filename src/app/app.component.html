@@ -5,5 +5,32 @@
   hellow world {{data.strPrgrmLanguage}}
 </h4>
 <div [style.background-color]="colorFunc()">
-<input type="text" name="" id="" value="{{title}}"/>
+  <input type="text" name="" id="" value="{{title}}" />
+</div>
+
+
+<h2 style="text-align: center;">
+  Event Handling
+</h2>
+<h2 style="text-align: center;">
+  HEY Friends {{str}}
+</h2>
+
+<button (click)="functionCall()">
+  Good morning
+</button>
+<button (click)="functionCall2()">
+  Good evening
+</button>
+
+<div style="text-align: center;">
+  <h2 (ngOnChanges)="onChange()">Count --{{count}}</h2>
+  <h3>Count number is {{strOddOrEven}}</h3>
+  <button (click)="increment()">
+    increment 
+  </button>
+  <button (click)="decrement()">
+    decrement
+  </button>
+
 </div>
