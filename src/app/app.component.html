@@ -1,36 +1,14 @@
-<h4 style="text-align: center;">
-  hellow world {{title}}
-  hellow world {{data.strTech1}}
-  hellow world {{data.strTech2}}
-  hellow world {{data.strPrgrmLanguage}}
-</h4>
-<div [style.background-color]="colorFunc()">
-  <input type="text" name="" id="" value="{{title}}" />
-</div>
-
-
-<h2 style="text-align: center;">
-  Event Handling
-</h2>
-<h2 style="text-align: center;">
-  HEY Friends {{str}}
-</h2>
-
-<button (click)="functionCall()">
-  Good morning
-</button>
-<button (click)="functionCall2()">
-  Good evening
-</button>
-
+<h2 style="text-align: center;">Two way Data Binding</h2>
 <div style="text-align: center;">
-  <h2 (ngOnChanges)="onChange()">Count --{{count}}</h2>
-  <h3>Count number is {{strOddOrEven}}</h3>
-  <button (click)="increment()">
-    increment 
-  </button>
-  <button (click)="decrement()">
-    decrement
-  </button>
+  <input type="number" [(ngModel)]="count" />
 
+  <button (click) = "doCheckOddEven(count) ">
+    Check
+  </button>
+  <button style="text-align: center;"  (click) = "clear()">
+    clear
+  </button>
+  <h4 style="text-align: center;" [hidden]="blnHidden">
+    {{count}} -- {{strOddOrEven}}
+  </h4>
 </div>
