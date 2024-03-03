@@ -1,1 +1,43 @@
-<p>contactus works!</p>
+<div>
+    <h3 style="text-align: center;">Angular Forms </h3>
+    <form #form="ngForm" (ngSubmit)="form.valid&&onsubmit()">
+        <div>
+
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" name="firstName" required #firstName="ngModel"
+                [(ngModel)]="data.firstName">
+
+            <label class="text-danger" *ngIf="form.submitted && firstName.errors?.['required']">First Name is
+                required</label>
+        </div>
+        <div>
+            <label for="lastName">last Name</label>
+            <input type="text" class="form-control" name="lastName" required #lastName="ngModel"
+                [(ngModel)]="data.lastName">
+
+            <label class="text-danger" *ngIf="form.submitted && lastName.errors?.['required']">last Name is
+                required</label>
+        </div>
+        <div>
+            <label for="phone">Phone</label>
+            <input type="number" class="form-control" name="phone" required #phone="ngModel" [(ngModel)]="data.phone" pattern="^((\\+91-?)|0)?[0-9]{10}$">
+
+            <label class="text-danger" *ngIf="form.submitted && phone.errors?.['required']">phone is
+                required</label>
+                <label class="text-danger" *ngIf="form.submitted && phone.errors?.['pattern']">Invalid phone number</label>
+        </div>
+        <div>
+            <label for="email">email</label>
+            <input type="email" class="form-control" name="email" required #email="ngModel" [(ngModel)]="data.email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+
+            <label class="text-danger" *ngIf="form.submitted && email.errors?.['required']">email is
+                required</label>
+                <label class="text-danger" *ngIf="form.submitted && email.errors?.['pattern']">Invalid email </label>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary">
+                submit
+            </button>
+        </div>
+    </form>
+</div>

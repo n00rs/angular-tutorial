@@ -3,11 +3,12 @@ import { Router } from '@angular/router';
 import { ApicallService } from '../apicall.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule,CommonModule,HttpClientModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
