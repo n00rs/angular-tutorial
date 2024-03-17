@@ -1,0 +1,21 @@
+<div class="main-content">
+    <h3 style="text-align: center;">Reactive Dynamic Form</h3>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit(registrationForm)">
+
+        <label for="email"></label>
+        <input type="text" id="email" class="form-control" formControlName="email">
+        <div>
+            <button type="button" class="btn btn-success" (click)="addAlterNatives()">ADD</button>
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+        <div formArrayName="arrAlterNatives" *ngFor="let item of arrAlterNatives.controls; let i =index;">
+            {{item}}
+            <label>AlterNative Email {{i+1}}</label>
+            <input type="text" [formControlName]="i" class="form-control">
+
+        </div>
+    </form>
+</div>
