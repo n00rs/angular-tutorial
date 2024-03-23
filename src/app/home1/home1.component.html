@@ -1,1 +1,15 @@
-<p>home1 works!</p>
+<p>Angular Post methods!</p>
+
+<form (ngSubmit)="onSubmit()">
+
+    <label for="firstname">First Name</label>
+    <input type="text" name="firstname" id="firstname" placeholder="first Name" class="form-control"
+        class="form-control" name="strFirstName" [(ngModel)] = "data.strFirstName"/>
+    <label for="secondname">Second Name</label>
+    <input type="text" name="secondname" id="secondname" name="strLastName" placeholder="second Name" class="form-control" [(ngModel)] = "data.strLastName" />
+    <label for="age">Age</label>
+    <input type="number" placeholder="age" id="age" class="form-control" name="intAge" [(ngModel)] = "data.intAge"/>
+    <label for="salary">Salary</label>
+    <input type="number" placeholder="Salary" id="salary" class="form-control" name="dblSalary  " [(ngModel)] = "data.dblSalary" />
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
